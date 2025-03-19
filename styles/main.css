@@ -1,0 +1,340 @@
+/* SET UP */
+:root{
+    --couleur-rose: #EF32D9;
+    --couleur-texte: #FFFFFF;
+    --couleur-titre: #89FFFD;
+    --couleur-bg : radial-gradient(circle, #44464B 0%, #28292F 100%);
+    --couleur-bg-btn : #28292F;
+}
+
+body{
+    background: var(--couleur-bg);
+    color: var(--couleur-texte);
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+}
+
+main, header, footer{
+    max-width: 1196px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column{
+    flex-direction: column;
+}
+
+h1, h3{
+    color: var(--couleur-titre);
+}
+
+section{
+    margin-bottom: 100px;
+}
+
+/* HEADER */
+
+.nav-bar{
+    justify-content: flex-end;
+}
+
+.nav-bar, .nav-links, .nav-icons{
+    gap: 20px;
+
+}
+
+.main-icon{
+    margin-right: auto;
+}
+
+/* HERO */
+#hero{
+    position: relative;
+    min-height: 601px;
+    justify-content: flex-start;
+}
+.shoes-list{
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+    gap: 5px;
+}
+
+.shoe{
+    border: 1px solid var(--couleur-texte);
+    height: 122px;
+    width: 122px;
+    background: var(--couleur-bg);
+}
+
+.hero-text{
+    max-width: 467px;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-shadow: 0 2px 5px rgb(36, 36, 36);
+}
+
+#hero > img{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+h1{
+    font-size: clamp(96px, 5vw, 161px);
+    color: var(--couleur-titre);
+}
+h2{
+    font-size: clamp(24px, 3vw, 41px);
+}
+.lighter{
+    font-weight: 400;
+}
+
+.hero-text p{
+    font-size: clamp(18px, 2vw, 24px);
+}
+
+.btn{
+    background: var(--couleur-rose);
+    padding: 14px 17px;
+    border-radius: 6px;
+    margin-top: 30px;
+    text-shadow: none;
+
+}
+
+.social-links{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    gap: 22px;
+    transform: translateY(-50%);
+}
+
+.social-links img{
+    height: 25px;
+    width: 25px;
+    max-width: none;
+}
+
+/* VENTES */
+
+#ventes{
+    flex-wrap: wrap;
+}
+.pink-bar{
+    background: var(--couleur-rose);
+    width: 149px;
+    height: 9px;
+}
+
+h3{
+    font-size: clamp(35px, 3vw, 64px);
+    margin-bottom: clamp(40px, 2.5vh, 80px);
+    font-weight: normal;
+}
+
+.vente-texte{
+    position: relative;
+}
+
+.ventes-gallerie{
+    gap: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ventes-gallerie a{
+    display: inline-block;
+    flex: 1;
+    min-width: 350px;
+    max-width: 350px;
+}
+
+.vente-texte span{
+display: block;
+}
+
+.vente-texte .nom{
+    color: var(--couleur-titre);
+    font-size: 20px;
+}
+
+.vente-texte .prix{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: bold;
+}
+
+.name{
+    background: var(--couleur-titre);
+    font-weight: 400;
+}
+
+.nature{
+    font-weight: 300;
+}
+.option{
+    font-weight: 100;
+}
+
+/* COLLECTIONS */
+
+.card{
+    position: relative;
+}
+.card a{
+    font-size: 20px;
+    font-weight: bold;
+    background: var(--couleur-bg-btn);
+    border-radius: 36px;
+    padding: 7px 13px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.collections-gallery{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-areas: "c1 c1 c2 c4" "c1 c1 c3 c4" "c5 c6 c6 c4";
+    max-width: 971px;
+    margin: auto;
+    gap: 10px;
+}
+
+.c1{
+    grid-area: c1;
+}
+.c2{
+    grid-area: c2;
+}
+.c3{
+    grid-area: c3;
+}
+.c4{
+    grid-area: c4;
+}
+.c5{
+    grid-area: c5;
+}
+.c6{
+    grid-area: c6;
+}
+
+.card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* FOOTER */
+.footer-bar{
+    margin: auto;
+    width: clamp(265px,80%,543px);
+    margin-bottom: 45px;
+}
+
+.footer-links{
+    gap: 10%;
+    align-items: flex-start;
+    
+}
+
+.footer-infos{
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-social-links{
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.footer-links .bold{
+    font-weight: 700;
+}
+
+
+
+hr{
+    margin: 45px auto 25px;
+}
+
+/* ----------------MEDIA---------------- */
+@media (max-width:1000px) {
+    #hero > img {
+        position: static;
+    }
+    #hero{
+        flex-direction: column;
+    }
+    .social-links, .shoes-list {
+        display: none;
+    }
+
+    .hero-text{
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .hero-text p{
+        text-align: center;
+    }
+}
+
+@media (max-width: 690px) {
+    section{
+        margin-bottom: 40px;
+    }
+    .nav-bar, .nav-links, .nav-icons{
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+
+    }
+
+    #header{
+        align-items: flex-start;
+    }
+    .collections-gallery{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card img {
+        height: 100%;
+        width: 100%;
+        min-width: 350px;
+        max-width: 394px;
+        max-height: 415px;
+        object-fit: cover;
+    }
+    .card a{
+        left: 10px;
+        right: auto;
+    }
+
+    .footer-links{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-infos{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    
+}
